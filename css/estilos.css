@@ -1,0 +1,508 @@
+.container {
+  width:1080px;
+  margin:0px auto;
+  font-size:1em;
+  font-family: "Arial", Georgia, Serif;
+  font-size: 15px;
+}
+header {
+  text-align:center;
+  border: 1px solid #666;
+  background: #cccccc;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+section,aside {
+  margin-top: 5px;
+  padding: 10px;
+  -moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;
+}
+section {
+  float: left;
+  width: 70%;
+  background: #fafafa;
+  border: 1px solid #ccc;
+}
+aside {
+  float: right;
+  width: 25%;
+  background:#ccc;
+  color: #333;
+}
+nav {
+  padding:0.2%;
+  background:#f06156;
+  margin-top: 0.5%;
+}
+nav ul {
+  list-style-type:none;
+  padding:0px;
+  width: 100%;
+  display: table;
+  text-align: center;
+}
+nav ul li {
+  display: inline;
+}
+nav ul li:hover {
+  background-color: #ccc;
+  text-decoration: underline;
+}
+nav ul li a {
+ display:inline-block;
+ text-align:center;
+ text-decoration:none;
+ color: #75302a;
+ font-weight: bold;
+  padding:6px 15px;
+  margin:2px;
+  background:#fafafa;
+  -moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0px 10px 0px;
+  background-color: #333;
+  text-align: center;
+}
+footer a {
+  color: #fff;
+}
+
+h2 {
+  color: #f06156;
+}
+/* pantalla maximo 980px */
+@media screen and (max-width:980px) {
+  .container {
+    width:98%;
+  }
+  section {
+    width:68%;
+  }
+}
+ 
+/* pantalla maximo 700px */
+@media screen and (max-width:700px) {
+  aside,section {
+    float:none;
+    width:96%;
+    font-size:1.2em;
+  }
+  nav, section {
+    font-size:1.2em;
+  }
+  aside {
+    margin-top:5px;
+    background:#333;
+    color: #fff;
+  }
+  nav ul {
+    float:none;
+    clear:both;
+  }
+}
+ 
+ 
+/* pantalla maximo 480px */
+@media screen and (max-width:480px) {
+  aside {
+    display:block;
+    background:#333;
+    color: #fff;
+    font-size:1.5em;
+  }
+  nav, section {
+    font-size:1.5em;
+  }
+  section {
+    width:94%;
+  }
+  nav ul {
+    display: table;
+    text-align: center;
+    float: none;
+    width:100%;
+  }
+  nav ul li {
+    float:none;
+  }
+}
+
+/* ===== Unidad 1: dos columnas (Agenda de clases | Clases cargadas) ===== */
+/* Solo en pantallas grandes; en celular se apilan como ya define el resto del CSS */
+@media screen and (min-width:701px) {
+  section.columna,
+  aside.columna {
+    width: 45%;
+  }
+}
+aside.columna table {
+  width: 100%;
+  background: #fafafa;
+  border-collapse: collapse;
+}
+aside.columna th,
+aside.columna td {
+  padding: 5px;
+}
+
+
+/* ===== Unidad 2: resultado del cálculo de fechas ===== */
+.resultado {
+  padding: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+  -moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;
+}
+.resultado.ok {
+  background: #e6f4ea;
+  border: 1px solid #7bb58a;
+  color: #1e5631;
+}
+.resultado.error {
+  background: #fdeaea;
+  border: 1px solid #e08a8a;
+  color: #8a1f1f;
+}
+
+
+/* ===== Unidad 2: formulario y panel de resultado ===== */
+aside.panel-claro {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  color: #333;
+}
+.campos-fecha {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.campos-fecha label {
+  font-weight: bold;
+  font-size: 0.85em;
+}
+.campos-fecha input {
+  width: 80px;
+  padding: 5px;
+  margin-top: 3px;
+}
+.btn-calcular {
+  background: #2e9e3e;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  -moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;
+}
+.btn-calcular:hover {
+  background: #247d31;
+}
+.indicacion {
+  font-style: italic;
+  font-size: 0.9em;
+}
+.resultado {
+  margin-top: 0;
+}
+
+
+/* ===== Unidad 3: comentarios ===== */
+.form-comentarios label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+.form-comentarios input[type="text"],
+.form-comentarios input[type="email"],
+.form-comentarios textarea {
+  width: 95%;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 1em;
+}
+.form-comentarios input[type="submit"] {
+  background: #2e9e3e;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  -moz-border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;border-radius:3px;
+}
+.form-comentarios input[type="submit"]:hover {
+  background: #247d31;
+}
+.comentario {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-left: 4px solid #f06156;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+.comentario p {
+  margin: 4px 0;
+}
+.comentario .fecha {
+  font-size: 0.85em;
+  color: #777;
+}
+
+
+/* ===== Unidad 3: ajuste de diseño (lista con scroll + formulario a la derecha) ===== */
+.lista-comentarios {
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+.form-comentarios input[type="text"],
+.form-comentarios input[type="email"],
+.form-comentarios textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #999;
+  background: #fafafa;
+}
+.form-comentarios input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+}
+.comentario .fecha {
+  color: #333;
+  font-size: 0.9em;
+}
+
+
+/* ===== Unidad 4: imágenes ===== */
+.img-unidad4 {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 3px;
+  background: #fff;
+}
+
+/* Unidad 5: Captchat */
+.captcha-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-top: 5px;
+}
+
+.img-captcha {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+.input-captcha {
+	width: 180px;
+}
+
+.columna-centrada {
+	float: none;
+	margin: 20px auto;
+	max-width: 550px;
+	width: 100%;
+}
+
+/* Unidad 6: Usuarios*/
+.contenedor-poo {
+    width: 60%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px 30px;
+    border: 1px solid #b0b0b0;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-poo h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.tarjeta-usuario {
+    background-color: #f4f5f7;
+    border-left: 3px solid #2b5797; /* línea lateral decorativa */
+    padding: 12px 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.tarjeta-usuario p {
+    margin: 4px 0;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* Unidad 7: Productos */
+aside form {
+  display: flex;
+  flex-direction: column;
+}
+
+aside form input[type="text"],
+aside form input[type="number"],
+aside form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  background: #f7f7f7;
+  font-family: inherit;
+  font-size: 1em;
+  resize: none;
+  margin-bottom: 12px;
+}
+
+aside form label {
+  display: block;
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Botón "Guardar Producto": ancho completo, celeste, bien redondeado */
+.btn-guardar {
+  background: #42a5f5 !important;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 14px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+}
+.btn-guardar:hover {
+  background: #1e88e5 !important;
+}
+
+/* Tabla de productos */
+section table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+section table th {
+  background: #0a104d;
+  color: #fff;
+  text-align: left;
+  padding: 10px;
+  font-size: 0.9em;
+}
+section table td {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  font-size: 0.9em;
+}
+
+/* Botón "Eliminar" rojo, dentro de la tabla */
+.btn-eliminar {
+  display: inline-block;
+  background: #e53935;
+  color: #fff !important;
+  padding: 6px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+.btn-eliminar:hover {
+  background: #c62828;
+}
+
+/* Unidad 8: Usuarios y Login */
+/* Contenedor flexible de dos columnas */
+.formularios-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Tarjeta contenedora de cada formulario */
+.card-form {
+    flex: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.card-form h2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Campos de entrada */
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.campo input[type="email"],
+.campo input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Botón de Registro (Verde) */
+.btn-verde {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-verde:hover {
+    background-color: #218838;
+}
+
+/* Botón de Login */
+.btn-azul {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-azul:hover {
+    background-color: #0069d9;
+}
